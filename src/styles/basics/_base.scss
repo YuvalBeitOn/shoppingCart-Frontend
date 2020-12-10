@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  color: rgb(61, 61, 61);
+}
+button{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+body {
+  height: 100vh;
+}
+
+#app {
+  height: 100%;
+}
+
+.main-container {
+  height: 100%;
+  @include for-norml-layout {
+    margin-top: 50px;
+  }
+  // @include for-narrow-layout {
+  //   margin-top: 0;
+  // }
+}
+
+img {
+  width: 100%;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+// scroll-bar:
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  // margin-left: 20px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 48px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #949494;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #c4c4c4;
+}
+
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 43px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
