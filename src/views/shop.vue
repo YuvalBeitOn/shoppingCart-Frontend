@@ -1,5 +1,5 @@
 <template>
-  <section>Shop</section>
+  <section><product-list :products="products"/></section>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
     productList,
   },
   computed: {
-    products() {
+   products() {
       return this.$store.getters.products;
     },
   },

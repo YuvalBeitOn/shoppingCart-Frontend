@@ -1,13 +1,29 @@
 <template>
-  <section>product-list</section>
+  <ul class="task-list clean-list flex wrap align-center justify-center gap">
+    <product-preview
+      v-for="product in products"
+      :key="product._id"
+      :product="product"
+    />
+  </ul>
 </template>
 
 <script>
+import productPreview from "./product-preview.vue";
 export default {
-
-}
+  components: { productPreview },
+  props: {
+    products: Array,
+  },
+  data() {
+    return {
+      productsCopy: null,
+    };
+  },
+  created() {
+    this.productsCopy = this.products;
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
