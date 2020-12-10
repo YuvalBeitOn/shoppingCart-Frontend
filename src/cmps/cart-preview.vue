@@ -1,13 +1,19 @@
 <template>
-  <li v-if="product" class="cart-preview flex column">
+  <li v-if="product" class="cart-preview flex ">
+      <div class="img-container">
+
     <img
       class="prod-img"
       :src="`https://picsum.photos/200/200?random=${product.imgUrl}`"
       alt="product-Img"
     />
-    <h1>name:{{ product.name }}</h1>
-    <h4 class="prod-price">price:{{product.price}}</h4>
+      </div>
+      <div class="content-container flex column">
+
+    <h3>{{ product.name }}</h3>
+    <h4 class="prod-price">{{product.price}}$</h4>
     <h4>count:{{product.count}}</h4>
+      </div>
   </li>
 </template>
 

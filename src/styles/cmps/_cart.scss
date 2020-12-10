@@ -1,0 +1,30 @@
+.main-cart{
+    background-color: #EEEEEE;
+    height: 100%;
+    .cart-container{
+        padding-top: 50px;
+        .bag-container{
+            background-color: white;
+            padding: 26px 30px 16px;
+            margin-right: 25px;
+        }
+        .total-container{
+            background-color: white;
+
+            padding: 26px 30px 16px;
+            align-self: flex-start;
+            .btn-checkout{
+                background-color: #1E8849;
+                letter-spacing: 1px;
+                max-width: 100%;
+                padding: 15px;
+                font-size: 1rem;
+                font-weight: bolder;
+                color: white;
+                text-transform: uppercase;
+            
+
+            }
+        }
+    }
+}

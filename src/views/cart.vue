@@ -1,24 +1,27 @@
 <template>
-  <section class="main-cart">
-   <div class="cart-container flex wrap align-center">
-     <div class="bag flex column">
-       <h3>MY BAG</h3>
+  <section v-if="cartProducts.length" class="main-cart">
+   <div class="cart-container flex wrap justify-center align-center">
+     <div class="bag-container flex column">
+       <h3 class="mb-5">MY BAG</h3>
        <hr />
        
        <cart-list v-if="cartProducts" :cartProducts="cartProducts" />
      </div>
-     <div class="total flex column">
-       <h3>TOTAL</h3>
+     <div class="total-container flex column">
+       <h3 class="mb-5">TOTAL</h3>
        <hr />
        <div class="subtotal-container flex space-between">
-    <h4>Sub-total</h4>
+    <h4 class="mb-5">Sub-total</h4>
     <span>{{cartTotal}}</span>
     </div>
        <hr />
-  <button class="btn-checkout">Chackout</button>
+  <button @click="chackout" class="btn-checkout">Chackout</button>
      </div>
    </div>
   </section>
+  <div v-else class="flex justify-center align-center">
+    <h1>You Dont Have a product in your bag, go to shop and starting to buy!!</h1>
+  </div>
 </template>
 
 <script>
@@ -38,6 +41,11 @@ computed:{
     return cartTotal ? cartTotal : 'not have'
   }
 
+},
+methods:{
+chackout(){
+  this.$store.commit({type:'checkout'})
+}
 }
 
 }

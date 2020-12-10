@@ -37,6 +37,9 @@ export const productStore = {
     }
   },
   mutations: {
+    checkout(state){
+      state.cartProducts = []
+    },
     setProducts(state, { products }) {
       state.products = products;
       console.log('state.products:', state.products)

@@ -1,0 +1,17 @@
+.cart-preview{
+    line-height: .7em;
+    padding: 0 0 10px;
+    margin-bottom: 5px;
+    &:not(:last-child){
+        border-bottom: 1px solid #d3d2d2;
+    }
+    .img-container{
+        margin-right: 15px;
+    }
+    .content-container{
+        padding-top: 7px;
+        >*{
+            margin-bottom: 17px;
+        }
+    }
+}
