@@ -15,17 +15,17 @@
         <span class="left-border"></span>
         <h2 class="product-title">Our Products</h2>
       </div>
-      <span class="my-cart flex">My Cart ({{ cartLength }} items)</span>
+      <router-link to="/cart"><span class="my-cart flex">My Cart ({{ cartLength }} items)</span></router-link>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  computed: {
-    cartLength() {
-      return this.$store.getters.cartProducts.length;
-    },
-  },
+  computed:{
+    cartLength(){
+      return this.$store.getters.cartLength
+    }
+  }
 };
 </script>

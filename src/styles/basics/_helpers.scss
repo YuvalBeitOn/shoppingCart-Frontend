@@ -1,7 +1,11 @@
 /* helpers! */
 
 /* Flex Helpers! */
-
+.prod-price {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 .flex {
   display: flex;
   &.space-around {
