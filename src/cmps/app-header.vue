@@ -1,5 +1,5 @@
 <template>
-  <section class="app-header flex space-between">
+  <section class="app-header flex space-between align-center">
     <router-link to="/"><h1>Miss Shop</h1></router-link>
     <nav class="nav-menu">
       <router-link to="/">Shop</router-link>
