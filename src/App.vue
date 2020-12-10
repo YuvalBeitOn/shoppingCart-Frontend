@@ -13,5 +13,10 @@ export default {
   components: {
     appHeader,
   },
+   created() {
+    this.productsthis.$store.dispatch({
+      type: "loadProducts",
+    });
+  },
 };
 </script>
