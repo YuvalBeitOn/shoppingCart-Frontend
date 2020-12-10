@@ -9,9 +9,18 @@ export const productStore = {
     products(state) {
       return state.products;
     },
-    cart(state) {
+    cartProducts(state) {
       return state.cartProducts;
+      
     },
+    cartSum(){
+      const cartProducts = state.cartProducts
+      const sumProducts = cartProducts.reduce((acc,prod)=>{
+        acc += prod.price
+        return acc
+      },0)
+      return sumProducts
+    }
   },
   mutations: {
     setProducts(state, { products }) {

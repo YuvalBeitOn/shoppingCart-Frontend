@@ -1,5 +1,8 @@
 <template>
-  <section>product details</section>
+  <section class="product-details">
+    <h1>Product-details</h1>
+    
+  </section>
 </template>
 
 <script>
