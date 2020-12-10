@@ -12,7 +12,7 @@
 export default {
   computed:{
     cartLength(){
-      return this.$store.getters.cartProducts.length
+      return this.$store.getters.cartLength
     }
   }
 };

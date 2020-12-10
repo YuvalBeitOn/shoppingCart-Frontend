@@ -7,7 +7,7 @@
     />
     <div class="prod-price">Price: {{ product.price }}$</div>
     <div class="prod-name">{{ product.name }}</div>
-    <button class="add-btn" @click="addToCart(product._id)">Add to cart</button>
+    <button class="add-btn" @click="addToCart(product)">Add to cart</button>
   </li>
 </template>
 
@@ -17,11 +17,11 @@ export default {
     product: Object,
   },
   created() {
-    this.productCopy = this.product;
   },
   methods: {
-    addToCart(productId) {
-      this.$store.commit("addProduct", this.productCopy);
+    addToCart(product) {
+      console.log('product:', product)
+      this.$store.commit({type:"addProduct", product});
     },
   },
 };

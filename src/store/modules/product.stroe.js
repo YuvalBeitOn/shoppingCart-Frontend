@@ -10,15 +10,29 @@ export const productStore = {
       return state.products;
     },
     cartProducts(state) {
-      return state.cartProducts;
+      const cartProducts = state.cartProducts;
+      const cartProductsMap = cartProducts.reduce((acc,prod)=>{
+        if(!acc[prod._id]) {
+          acc[prod._id] = {...prod,count:0}
+        }
+        acc[prod._id].count++
+        acc[prod._id].price*=acc[prod._id].count
+        return acc
+      },{})
+      console.log('obj map',cartProductsMap);
+      return cartProductsMap
       
     },
-    cartSum(state){
+    cartLength(state){
+    return state.cartProducts.length
+    },
+    cartTotal(state){
       const cartProducts = state.cartProducts
       const sumProducts = cartProducts.reduce((acc,prod)=>{
         acc += prod.price
         return acc
       },0)
+      console.log('sumProducts:', sumProducts)
       return sumProducts
     }
   },
@@ -34,6 +48,7 @@ export const productStore = {
       state.cartProducts.splice(idx, 1);
     },
     addProduct(state, { product }) {
+      console.log('product:', product)
       state.cartProducts.unshift(product);
     },
     editProduct(state, { product }) {
