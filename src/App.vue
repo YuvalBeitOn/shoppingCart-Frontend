@@ -1,9 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Shop</router-link> |
-      <router-link to="/cart">Cart</router-link>
-    </div>
-    <router-view/>
+    <main class="main-container">
+      <app-header />
+      <router-view />
+    </main>
   </div>
 </template>
+
+<script>
+import appHeader from "./cmps/app-header";
+export default {
+  components: {
+    appHeader,
+  },
+};
+</script>

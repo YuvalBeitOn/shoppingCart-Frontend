@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import cart from '../views/cart'
+import shop from '../views/shop'
 
 Vue.use(VueRouter)
 
@@ -12,6 +14,8 @@ const routes = [
   {
     path: '/cart',
     name: 'cart',
+    component: cart
+
   }
 ]
 
