@@ -4,7 +4,7 @@
      <div class="bag flex column">
        <h3>MY BAG</h3>
        <hr />
-       <cart-list :cartProducts="cartProducts" />
+       <!-- <cart-list :cartProducts="cartProducts" /> -->
      </div>
      <div class="total flex column">
        <h3>TOTAL</h3>
@@ -21,17 +21,19 @@
 </template>
 
 <script>
-import cartList from '@/cmps/cart-list'
+// import cartList from '@/cmps/cart-list'
 export default {
 components:{
-  cartList
+  // cartList
 },
 computed:{
   cartProducts(){
+   console.log('this.$store.getters.cartProducts:', this.$store.getters.cartProducts)
    return this.$store.getters.cartProducts
 },
   cartSum(){
-    return this.$store.getters.cartSum
+    const sum = this.$store.getters.cartSum
+    return sum ? sum : 'not have'
   }
 
 }

@@ -13,7 +13,7 @@ export const productStore = {
       return state.cartProducts;
       
     },
-    cartSum(){
+    cartSum(state){
       const cartProducts = state.cartProducts
       const sumProducts = cartProducts.reduce((acc,prod)=>{
         acc += prod.price
