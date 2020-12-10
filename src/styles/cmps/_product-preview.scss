@@ -1,10 +1,12 @@
 .product-preview {
+    cursor: pointer;
+
   > * {
     padding: 3px;
   }
   border: 2px solid #e4e4e4;
-  border-radius: 4px;
-  padding: 10px 5px;
+//   border-radius: 4px;
+  padding: 10px 6px;
   img {
     width: 180px;
   }

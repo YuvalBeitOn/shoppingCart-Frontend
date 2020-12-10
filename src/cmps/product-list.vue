@@ -1,5 +1,5 @@
 <template>
-  <ul class="product-list clean-list flex wrap align-center justify-center container">
+  <ul class="product-list clean-list flex wrap align-center justify-center">
     <product-preview
       v-for="product in products"
       :key="product._id"
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import productPreview from "./product-preview.vue";
+import productPreview from './product-preview.vue'
 export default {
   components: { productPreview },
   props: {
@@ -18,12 +18,12 @@ export default {
   data() {
     return {
       productsCopy: null,
-    };
+    }
   },
   created() {
-    this.productsCopy = this.products;
+    this.productsCopy = this.products
   },
-};
+}
 </script>
 
 <style></style>

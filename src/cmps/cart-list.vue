@@ -9,14 +9,14 @@
 </template>
 
 <script>
-import cartPreview from "./cart-preview";
+import cartPreview from './cart-preview'
 export default {
-  name: "cart-list",
+  name: 'cart-list',
   props: {
     cartProducts: Object,
   },
   components: { cartPreview },
-};
+}
 </script>
 
 <style>

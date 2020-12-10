@@ -1,0 +1,26 @@
+.product-details {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  .product-img {
+    width: 200px;
+    height: 400px;
+    border-radius: 4px;
+    margin-right: 30px;
+  }
+  .prod-details {
+      width: 400px;
+      .prod-name{
+          font-size: 2rem;
+      }
+    //   margin-top: 50px;
+      >* {
+          padding: 8px;
+          font-size: 1.2rem;
+      }
+      .goback-btn {
+          margin-top: 30px;
+          width: 100px;
+      }
+  }
+}

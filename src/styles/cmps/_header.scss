@@ -1,15 +1,43 @@
-.app-header {
-  height: 70px;
-  background-color: beige;
-  // margin-bottom: 50px;
-  padding: 5px 10px;
-  h1 {
-    font-size: 2.5rem;
+.app-header-container {
+  color: white;
+  .app-header {
+    height: 70px;
+    background-color: rgb(39, 39, 39);
+    padding: 5px 10px;
+    h1 {
+      font-size: 2.5rem;
+      color: white;
+    }
+    nav {
+      > * {
+        font-size: 1.3rem;
+        padding: 5px;
+        color: white;
+      }
+    }
   }
-  nav {
-    > * {
-      font-size: 1.3rem;
-      padding: 5px;
+ .main-img {
+    height: 350px;
+  }
+  .product-control {
+    color: rgb(36, 36, 36);
+    height: 80px;
+    border-bottom: 0.5px solid #e4e4e4;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    .product-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .my-cart {
+        color: gray;
+    }
+    .left-border {
+        width: 7px;
+        height: 80px;
+        background-color: rgb(214, 199, 58);
+        margin-right: 10px;
     }
   }
 }
