@@ -14,7 +14,7 @@ export default {
     appHeader,
   },
    created() {
-    this.productsthis.$store.dispatch({
+    this.$store.dispatch({
       type: "loadProducts",
     });
   },

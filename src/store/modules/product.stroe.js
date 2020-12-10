@@ -16,6 +16,7 @@ export const productStore = {
   mutations: {
     setProducts(state, { products }) {
       state.products = products;
+      console.log('state.products:', state.products)
     },
     deleteProduct(state, { productId }) {
       const idx = state.cartProducts.findIndex(
