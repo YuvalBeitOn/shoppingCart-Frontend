@@ -1,5 +1,5 @@
 <template>
-  <li class="product-preview">
+  <li class="product-preview" @click="goToDetails">
     <img
       class="prod-img"
       :src="`https://picsum.photos/200/300?random=${product.imgUrl}`"
@@ -23,6 +23,9 @@ export default {
     addToCart(productId) {
       this.$store.commit("addProduct", this.productCopy);
     },
+    goToDetails() {
+       this.$router.push(`/product/${this.product._id}`)
+    }
   },
 };
 </script>

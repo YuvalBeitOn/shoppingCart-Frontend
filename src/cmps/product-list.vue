@@ -1,5 +1,5 @@
 <template>
-  <ul class="product-list clean-list flex wrap align-center justify-center container">
+  <ul class="product-list clean-list flex wrap align-center justify-center">
     <product-preview
       v-for="product in products"
       :key="product._id"

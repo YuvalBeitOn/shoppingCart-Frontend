@@ -9,9 +9,18 @@ export const productStore = {
     products(state) {
       return state.products;
     },
-    cart(state) {
+    cartProducts(state) {
       return state.cartProducts;
+
     },
+    cartSum(state) {
+      const cartProducts = state.cartProducts
+      const sumProducts = cartProducts.reduce((acc, prod) => {
+        acc += prod.price
+        return acc
+      }, 0)
+      return sumProducts
+    }
   },
   mutations: {
     setProducts(state, { products }) {
@@ -33,6 +42,11 @@ export const productStore = {
       );
       state.products.splice(idx, 1, product);
     },
+    getProductById(state, { productId }) {
+      const product = state.products.find(product => product._id === productId)
+      console.log(product);
+      return product;
+    }
   },
   actions: {
     async loadProducts({ commit }) {

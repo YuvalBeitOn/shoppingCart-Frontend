@@ -2,7 +2,7 @@ import httpService from './http.service'
 
 export const productService = {
     query,
-    // getById,
+    getById,
     // remove,
     // save,
     // getEmpty
@@ -15,9 +15,9 @@ async function query() {
 }
 
 
-// async function getById(id) {
-//     return httpService.get(`product/${id}`)
-// }
+async function getById(id) {
+    return httpService.get(`product/${id}`)
+}
 
 
 // async function remove(id) {

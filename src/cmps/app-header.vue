@@ -5,14 +5,17 @@
       <nav class="nav-menu">
         <router-link to="/">Shop</router-link>
         <router-link to="/cart"
-          ><i class="fas fa-shopping-cart"></i
-        ></router-link>
+          ><i class="fas fa-shopping-cart"></i> {{ cartLength }}</router-link
+        >
       </nav>
     </section>
-    <img src="@/assets/img/shopping.png" alt="" />
-    <div>
-      <h2>Our Products</h2>
-      <span>My Cart</span>
+    <img class="main-img" src="@/assets/img/shopping.png" alt="" />
+    <div class="product-control flex align-center space-between">
+      <div class="title-container flex align-center">
+        <span class="left-border"></span>
+        <h2 class="product-title">Our Products</h2>
+      </div>
+      <span class="my-cart flex">My Cart ({{ cartLength }} items)</span>
     </div>
   </section>
 </template>
@@ -20,9 +23,9 @@
 <script>
 export default {
   computed: {
-    // cartItems() {
-    //   return this.$store.getters.cart.
-    // }
-  }
+    cartLength() {
+      return this.$store.getters.cartProducts.length;
+    },
+  },
 };
 </script>

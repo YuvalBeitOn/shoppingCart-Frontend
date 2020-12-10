@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="shop-app container">
     <main class="main-container">
       <app-header />
       <router-view />
@@ -20,3 +20,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.shop-app {
+  margin: 0 auto;
+}
+</style>

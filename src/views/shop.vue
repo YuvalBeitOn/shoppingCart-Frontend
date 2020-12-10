@@ -1,5 +1,5 @@
 <template>
-  <section><product-list :products="products"/></section>
+  <section class="shop-app"><product-list :products="products"/></section>
 </template>
 
 <script>
